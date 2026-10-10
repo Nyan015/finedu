@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Controle de gastos | Finedu</title><meta name="description" content="Registre despesas e acompanhe seus gastos."><meta name="theme-color" content="#15803D"><link rel="stylesheet" href="style.css"></head><body><header class="header"><div class="container nav"><a href="index.html" class="logo">Fin<span>edu</span></a><button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">☰</button><nav id="menu" class="menu" aria-label="Menu principal"><a href="index.html">Início</a><a href="aprender.html">Aprender</a><a href="metas.html">Metas</a><a href="gastos.html" class="ativo" aria-current="page">Gastos</a><a href="simulador.html">Simulador</a><a href="dicas.html">Dicas</a><a href="sobre.html">Sobre</a><button class="btn btn-outline" type="button" data-aviso="Em breve você poderá entrar na sua conta!">Entrar</button><button class="btn" type="button" data-aviso="Em breve você poderá criar sua conta!">Criar conta</button></nav></div></header><main><section class="page-hero"><div class="container"><p class="eyebrow">ORGANIZAÇÃO</p><h1>Controle de gastos</h1><p>Registre suas despesas e entenda para onde seu dinheiro vai.</p></div></section><section id="gastos" class="section">
+  <div class="container">
+    <h2>Controle de gastos</h2>
+    <form id="formGasto" class="card form" novalidate>
+      <label>Descrição<input type="text" id="gastoDesc" placeholder="Ex.: Lanche"></label>
+      <label>Categoria
+        <select id="gastoCat">
+          <option>Alimentação</option><option>Transporte</option><option>Lazer</option>
+          <option>Estudos</option><option>Roupas</option><option>Saúde</option><option>Outros</option>
+        </select>
+      </label>
+      <label>Valor (R$)<input type="number" id="gastoValor" min="0" step="0.01"></label>
+      <label>Data<input type="date" id="gastoData"></label>
+      <button class="btn" type="submit">Adicionar gasto</button>
+      </form>
+    <div class="resumo">
+      <div class="card"><small>Total gasto</small><strong id="totalGasto">R$ 0,00</strong></div>
+      <div class="card"><small>Gastos cadastrados</small><strong id="qtdGasto">0</strong></div>
+      <div class="card"><small>Maior categoria</small><strong id="topCat">—</strong></div>
+    </div>
+    <div class="tabela-wrap">
+      <table>
+        <thead><tr><th>Descrição</th><th>Categoria</th><th>Data</th><th>Valor</th><th>Ação</th></tr></thead>
+        <tbody id="listaGastos"></tbody>
+      </table>
+    </div>
+  </div>
+</section></main><footer class="footer"><div class="container foot-grid"><div><a href="index.html" class="logo">Fin<span>edu</span></a><p>Educação financeira simples para escolhas mais conscientes.</p><p>Projeto desenvolvido para TCC do curso técnico em Desenvolvimento de Sistemas.</p></div><nav aria-label="Links do rodapé"><a href="index.html">Início</a><a href="aprender.html">Aprender</a><a href="metas.html">Metas</a><a href="gastos.html">Gastos</a><a href="simulador.html">Simulador</a><a href="dicas.html">Dicas</a><a href="sobre.html">Sobre</a></nav></div><p class="copy">© <span id="ano"></span> Finedu</p></footer><div class="modal" id="modal" hidden><div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitulo"><button class="fechar" id="fecharModal" aria-label="Fechar">✕</button><h3 id="modalTitulo"></h3><p id="modalTexto"></p></div></div><div id="toast" class="toast" role="status" aria-live="polite"></div><script src="script.js"></script></body></html>
