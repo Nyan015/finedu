@@ -139,3 +139,6 @@ th { background: #F1F5F9; } tbody tr { transition: background .2s; } tbody tr:ho
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; }
 }
+
+/* Navegação entre páginas */
+.menu a.ativo{color:var(--verde-escuro)}.menu a.ativo::after{width:100%}.page-hero{padding:42px 0;background:linear-gradient(135deg,#DCFCE7,#DBEAFE)}.page-hero .eyebrow{color:var(--verde-escuro);font-size:.8rem;font-weight:800;letter-spacing:.12em;margin-bottom:8px}.page-hero h1{font-size:clamp(2rem,5vw,2.8rem);line-height:1.15;letter-spacing:-.7px;margin-bottom:10px}.page-hero p:last-child{max-width:680px}.sobre-card{max-width:820px;margin:0 auto}.sobre-card h2{margin-top:12px}.sobre-card p+p{margin-top:14px}
